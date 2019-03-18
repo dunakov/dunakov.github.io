@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическое задание №12 (tables)</title>
+<style>
+  .first-table
+  {
+    border: 2px blue solid;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .first-table  td
+  {
+    padding: 5px;
+    border: 2px blue solid;
+  }
+
+  .first-table th
+  {
+    padding: 5px;
+    background-color: #888888;
+    color: white;
+  }
+  .col-one, .col-two
+  {
+    width: 120px;
+  }
+  .col-three
+  {
+    width: 150px;
+  }
+  .col-four
+  {
+    width: 180px;
+  }
+  .col-five, .col-six
+  {
+    width: 110px;
+  }
+  .td-midle-center
+  {
+    vertical-align: middle;
+    text-align: center;
+  }
+  .td-center
+  {
+    text-align:center;
+  }
+  .td-middle
+  {
+    vertical-align: middle;
+  }
+  .td-right
+  {
+    text-align:right;
+  }
+
+
+  .second-table
+  {
+    margin-left:auto;
+    margin-right:auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  .second-table td
+  {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .red-td
+  {
+    background-color:#ff0000;
+  }
+  .lightgreen-td
+  {
+    background-color:#80ff00;
+  }
+
+  .third-table
+  {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  .third-table td
+  {
+    width: 35px;
+    height: 35px;
+  }
+  .third-l-1
+  {
+    background-color: #ff1492;
+  }
+  .third-l-2
+  {
+    background-color: #ed82ed;
+  }
+  .third-l-3
+  {
+    background-color: #ff6bb5;
+  }
+  .third-l-4
+  {
+    background-color: #ffb8c2;
+  }
+  .third-m-1
+  {
+    background-color: #228a22;
+  }
+  .third-m-2
+  {
+    background-color: #3db370;
+  }
+  .third-m-3
+  {
+    background-color: #33cc33;
+  }
+  .third-m-4
+  {
+    background-color: #00ff00;
+  }
+
+  .fourth-table
+  {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  .fourth-table td
+  {
+    width: 50px;
+    height: 50px;
+    border: 1px green solid;
+    background-color: black;
+  }
+  td[class = "fourth-1"]
+  {
+    background-color: #008000;
+  }
+  td[class = "fourth-2"]
+  {
+    background-color: #2f8a56;
+  }
+  td[class = "fourth-3"]
+  {
+    background-color: #3db370;
+  }
+  td[class = "fourth-4"]
+  {
+    background-color: #33cc33;
+  }
+  td[class = "fourth-5"]
+  {
+    background-color: #8a4513;
+  }
+  td[class = "fourth-6"]
+  {
+    background-color: #b8840b;
+  }
+
+
+</style>
+</head>
+<body>
+<h1>Пример сложной таблицы</h1>
+
+<table class="first-table">
+
+    <tr>
+        <th class="col-one">Название 1</th>
+        <th class="col-two">Название 2</th>
+        <th class="col-three">Ещё название</th>
+        <th class="col-four">Куча элементов</th>
+        <th class="col-five">Список 1</th>
+        <th class="col-six">Список 2</th>
+    </tr>
+
+    <tr>
+        <td class="td-midle-center" rowspan="11">JPMC</td>
+        <td rowspan="5" class="td-middle">CST</td>
+        <td rowspan="3" class="td-middle">CT</td>
+        <td>ADS</td>
+        <td class="td-center">1</td>
+        <td class="td-center">10</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <!--<td></td>-->
+        <!--<td style="border: 2px blue solid;"></td>-->
+        <td>BTO</td>
+        <td class="td-center">2</td>
+        <td class="td-center">15</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <!--<td></td>-->
+        <!--<td style="border: 2px blue solid;"></td>-->
+        <td>CSI</td>
+        <td class="td-center">3</td>
+        <td class="td-center">6</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <!--<td></td>-->
+        <td class="td-midle-center" rowspan="2">VCT</td>
+        <td>ADS</td>
+        <td class="td-center">4</td>
+        <td class="td-center">10</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <!--<td></td>-->
+        <!--<td style="border: 2px blue solid;"></td>-->
+        <td>BTO</td>
+        <td class="td-center">5</td>
+        <td class="td-center">15</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <td colspan="3" class="td-right">Sub Total</td>
+
+        <td class="td-center">6</td>
+        <td class="td-center">15</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <td rowspan="4" class="td-middle">CST</td>
+        <td rowspan="3" class="td-middle">CT</td>
+        <td>ADS</td>
+        <td class="td-center">7</td>
+        <td class="td-center">10</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <!--<td></td>-->
+        <!--<td style="border: 2px blue solid;"></td>-->
+        <td>BTO</td>
+        <td class="td-center">8</td>
+        <td class="td-center">15</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <!--<td></td>-->
+        <!--<td style="border: 2px blue solid;"></td>-->
+        <td>CSI</td>
+        <td class="td-center">9</td>
+        <td class="td-center">6</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <!--<td></td>-->
+        <td class="td-center">VCT</td>
+        <td>ADS</td>
+        <td class="td-center">10</td>
+        <td class="td-center">10</td>
+    </tr>
+    <tr>
+        <!--<td></td>-->
+        <td colspan="3" class="td-right">Sub Total</td>
+        <td class="td-center">11</td>
+        <td class="td-center">15</td>
+    </tr>
+</table>
+
+<h3>color tables</h3>
+<table class="second-table">
+  <tr>
+    <td class="red-td"></td>
+    <td></td>
+    <td class="red-td"></td>
+    <td class="lightgreen-td"></td>
+    <td class="red-td"></td>
+    <td></td>
+    <td class="red-td"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="red-td"></td>
+    <td class="lightgreen-td"></td>
+    <td></td>
+    <td class="lightgreen-td"></td>
+    <td class="red-td"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="red-td"></td>
+    <td class="lightgreen-td"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="lightgreen-td"></td>
+    <td class="red-td"></td>
+  </tr>
+  <tr>
+    <td class="lightgreen-td"></td>
+    <td></td>
+    <td></td>
+    <td class="red-td"></td>
+    <td></td>
+    <td></td>
+    <td class="lightgreen-td"></td>
+  </tr>
+  <tr>
+    <td class="red-td"></td>
+    <td class="lightgreen-td"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="lightgreen-td"></td>
+    <td class="red-td"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="red-td"></td>
+    <td class="lightgreen-td"></td>
+    <td></td>
+    <td class="lightgreen-td"></td>
+    <td class="red-td"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="red-td"></td>
+    <td></td>
+    <td class="red-td"></td>
+    <td class="lightgreen-td"></td>
+    <td class="red-td"></td>
+    <td></td>
+    <td class="red-td"></td>
+  </tr>
+</table>
+
+<table class="third-table">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-m-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-m-1"></td>
+    <td class="third-m-2"></td>
+    <td class="third-m-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-3"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-m-1"></td>
+    <td class="third-m-2"></td>
+    <td class="third-m-3"></td>
+    <td class="third-m-2"></td>
+    <td class="third-m-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-3"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-3"></td>
+    <td class="third-l-4"></td>
+    <td class="third-l-3"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td class="third-m-1"></td>
+    <td class="third-m-2"></td>
+    <td class="third-m-3"></td>
+    <td class="third-m-4"></td>
+    <td class="third-m-3"></td>
+    <td class="third-m-2"></td>
+    <td class="third-m-1"></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-3"></td>
+    <td class="third-l-4"></td>
+    <td class="third-l-3"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-3"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-m-1"></td>
+    <td class="third-m-2"></td>
+    <td class="third-m-3"></td>
+    <td class="third-m-2"></td>
+    <td class="third-m-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-3"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-m-1"></td>
+    <td class="third-m-2"></td>
+    <td class="third-m-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td class="third-l-2"></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-m-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="third-l-1"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+</table>
+
+<table class="fourth-table">
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-1"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-1"></td>
+  <td class="fourth-1"></td>
+  <td class="fourth-1"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-1"></td>
+  <td class="fourth-1"></td>
+  <td class="fourth-1"></td>
+  <td class="fourth-1"></td>
+  <td class="fourth-1"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td class="fourth-2"></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td class="fourth-3"></td>
+  <td></td>
+</tr>
+<tr>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+  <td class="fourth-4"></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-6"></td>
+  <td class="fourth-5"></td>
+  <td class="fourth-6"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-6"></td>
+  <td class="fourth-5"></td>
+  <td class="fourth-6"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-6"></td>
+  <td class="fourth-5"></td>
+  <td class="fourth-6"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-6"></td>
+  <td class="fourth-5"></td>
+  <td class="fourth-6"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="fourth-6"></td>
+  <td class="fourth-5"></td>
+  <td class="fourth-6"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+</table>
+</body>
+</html>
