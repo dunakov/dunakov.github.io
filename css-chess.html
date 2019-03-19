@@ -6,16 +6,28 @@
   <style>
 
 
+  body
+  {
+    background-color: cyan;
+  }
+
   table.chess
   {
-    margin: 80px auto;
-    background: black;
+    margin:auto;
+    background-color:white;
     border-collapse: collapse;
+    border: 1px solid black;
+  }
+  tbody
+  {
+    background-color: rgba(0,0,0,0.5);
   }
   td
   {
-    width: 50px; height: 50px;
-    border: 1px solid gray;
+    width: 48px; height: 48px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
   }
   tr:nth-child(even) td:nth-child(even),
   tr:nth-child(odd) td:nth-child(odd)
@@ -24,60 +36,148 @@
   }
   table.chess tr:first-child td
   {
-    background: #94fc98;
-    height: 18px;
+    background: white;
+    height: 16px;
+    border-left: none;
+    border-right: none;
   }
   table.chess tr:last-child td
   {
-    background: #94fc98;
-    height: 18px;
+    background: white;
+    height: 16px;
+    border-left: none;
+    border-right: none;
   }
   table.chess tr td:first-child
   {
-    background: #94fc98;
-    width: 18px;
+    background: white;
+    width: 16px;
+    border-top: none;
+    border-bottom: none;
   }
   table.chess tr td:last-child
   {
-    background: #94fc98;
-    width: 18px;
+    background: white;
+    width: 16px;
+    border-top: none;
+    border-bottom: none;
   }
+
+  table.chess td.black-rook
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -96px -0px  ;
+  }
+  table.chess td.black-knight
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -192px -0px  ;
+  }
+  table.chess td.black-bishop
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -144px -0px  ;
+  }
+  table.chess td.black-queen
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -48px -0px  ;
+  }
+  table.chess td.black-king
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -0px -0px  ;
+  }
+  table.chess td.black-pawns
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -240px -0px  ;
+  }
+
+
+  table.chess td.white-rook
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -96px -48px  ;
+  }
+  table.chess td.white-knight
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -192px -48px  ;
+  }
+  table.chess td.white-bishop
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -144px -48px  ;
+  }
+  table.chess td.white-queen
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -48px -48px  ;
+  }
+  table.chess td.white-king
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -0px -48px  ;
+  }
+  table.chess td.white-pawns
+  {
+    background-image: url('chess.png');
+    background-repeat: no-repeat;
+    background-position: -240px -48px  ;
+  }
+  h1
+  {
+    text-align: center;
+  }
+
 
 </style>
 </head>
 <body>
+  <h1>Шахматы</h1>
   <table class="chess">
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td></td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td><td>h</td><td></td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td>8</td><td class="black-rook"></td><td class="black-knight"></td><td class="black-bishop"></td><td class="black-queen"></td><td class="black-king"></td><td class="black-bishop"></td><td class="black-knight"></td><td class="black-rook"></td><td>8</td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td>7</td><td class="black-pawns"></td><td class="black-pawns"></td><td class="black-pawns"></td><td class="black-pawns"></td><td class="black-pawns"></td><td class="black-pawns"></td><td class="black-pawns"></td><td class="black-pawns"></td><td>7</td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>6</td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>5</td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>4</td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>3</td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td>2</td><td class="white-pawns"></td><td class="white-pawns"></td><td class="white-pawns"></td><td class="white-pawns"></td><td class="white-pawns"></td><td class="white-pawns"></td><td class="white-pawns"></td><td class="white-pawns"></td><td>2</td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td>1</td><td class="white-rook"></td><td class="white-knight"></td><td class="white-bishop"></td><td class="white-queen"></td><td class="white-king"></td><td class="white-bishop"></td><td class="white-knight"></td><td class="white-rook"></td><td>1</td>
   </tr>
   <tr>
-    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    <td></td><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td><td>f</td><td>g</td><td>h</td><td></td>
   </tr>
   </table>
-
 </body>
 </html>
